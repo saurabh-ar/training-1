@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>traffic lightsss </title>
+  <!--<style>
+  p {
+    color: red;
+    margin: 5px;
+    cursor: pointer;
+  }
+  p:hover {
+    background: yellow;
+  }
+  </style>
+  -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+
+<!---row 1--->
+<div class="row">
+
+<br>
+<br>
+<br>
+<br>
+</div>
+<!----row 2---->
+<div class="row">
+
+<!----row2 coloumn 1---->
+<div class="col-lg-2"></div>
+<!---------------------->
+<script>
+
+$(document).ready(function () 
+  {
+ $("#red").click(function()
+      {
+      $("#greenbox").slideUp(1);
+      $("#yellowbox").slideUp(1);
+      $("#redbox").slideDown("slow");
+      
+      });
+      
+     
+
+    
+    
+    $("#yellow").click(function()
+      {
+      $("#redbox").slideUp(1);
+      $("#greenbox").slideUp(1);
+      $("#yellowbox").slideDown("slow");
+      
+      
+      });
+  
+    $("#green").click(function()
+      {
+      $("#redbox").slideDown(1);
+      $("#yellowbox").slideUp(1);
+      $("#greenbox").slideDown("slow");
+      
+      
+      
+      
+      });
+	 
+  });
+ 
+</script>
+<script> 
+// $(document).ready(function(){
+//   $("#red").click(function(){
+//   alert('red');
+//     $("#redbox").slideUp();
+// });
+
+   // });
+  /*$("#yellow").click(function(){
+    $("div").animate({
+      left:'250px',
+      opacity:'0.5',
+      height:'150px',
+      width:'150px'
+    });
+  });
+  $("red").click(function(){
+    $("div").animate({
+      left:'250px',
+      opacity:'0.5',
+      height:'150px',
+      width:'150px'
+    });
+  })*/
+
+
+</script> 
+
+<!----row2 coloumn 2---->
+<div class="col-lg-6">
+
+ 
+  <button id="red" 	type="button" class="btn btn-default">RED</button>
+  <button id="yellow" 	type="button" class="btn btn-default">YELLOW</button>
+  <button id="green" 	type="button" class="btn btn-default">GREEN</button>
+
+<!--my box-->
+<br>
+<br>
+<br>
+<div id= "redbox" style="background:#FF0000;height:100px;width:100px;position:absolute;display:none;"> </div>
+<div id= "yellowbox" style="background:#FFDA00;height:100px;width:100px;position:absolute;display:none;"> </div>
+<div id= "greenbox" style="background:#00CC00;height:100px;width:100px;position:absolute;display:none;"> </div>
+</div>
+
+<!--<script>
+$( "red" ).click(function() {
+  $( this ).slideUp();
+});
+</script>-->
+ 
+</body>
+</html>

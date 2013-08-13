@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<title> Content-Manipulation </title>	
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<script src="js/jquery-2.0.3.min.js"></script>
+	
+	<style>
+	.wrapper { margin :20px; }
+	</style>
+  
+</head>
+
+
+
+<body>
+	  <script>
+		    $(document).ready(function(){
+			$("#less").hide();
+			$("#lesspara").slideUp(10);
+
+			$("#more").click(function() {
+			  $("#lesspara").slideDown();
+			  $("#more").hide();
+			  $("#less").show();
+			  });
+		    
+			  $("#less").click(function() {
+			  $("#lesspara" ).slideUp();
+			  $("#less").hide();
+			  $("#more").show();
+			  });
+		     });
+	  </script>
+
+
+	<div class="row">
+	<div class="col-lg-2">
+	&nbsp;
+	</div>
+	<div class="col-lg-3">
+	  
+	      <div class="wrapper">
+		    
+		    <h4><b>The Road Not Taken</b><br></h4>
+
+		    <p id="morepara">
+			    Two roads diverged in a yellow wood,
+			    And sorry I could not travel both
+			    And be one traveler, long I stood>
+			    And looked down one as far as I could
+			    To where it bent in the undergrowth;
+			    <br>
+			    Then took the other, as just as fair,
+			    And having perhaps the better claim
+			    Because it was grassy and wanted wear,
+			    Though as for that the passing there
+			    Had worn them really about the same,
+			    <a id="more">more.....</a><br>
+		    </p>
+		    <p id="lesspara">
+			    And both that morning equally lay
+			    In leaves no step had trodden black.
+			    Oh,I kept the first for another day! 
+			    Yet knowing how way leads on to way
+			    I doubted if I should ever come back.
+			    <br>
+			    I shall be telling this with a sigh
+			    Somewhere ages and ages hence:
+			    Two roads diverged in a wood, and I,
+			    I took the one less traveled by,
+			    And that has made all the difference.
+			    <b>Robert Frost</b><a id="less">.....less</a>
+		    </p> 
+	      </div>
+	</div>
+
+</body>
+</html>

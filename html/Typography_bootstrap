@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> TYPOGRAPHY BOOTSTRAP </title>				    
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+
+</html>
+
+<body>
+<h2><<p class="text-centre"></p></h2>
+
+<abbr title="A R SAURABH"><p class="text-left">ARS</abbr></p>
+<address>
+  <strong>ARS San Francisco, CA 94107<br>
+  <abbr title="Phone">P:</abbr> (123) 456-7890
+</address>
+
+<address>
+  <strong>Full Name</strong><br>
+  <a href="mailto:#">saurabh.ar02@gmail.com</a>
+</address>
+
+<blockquote>
+  <p>Nothing is permanent, Not even Death..</p>
+  <small> in a famous movie said by   <cite title="">Jhonny Depp</cite></small>
+</blockquote>
+
+<p class="text-center"><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+
+<dl class="dl-horizontal">
+  <dt>
+  XXXXXXXXXXXXXXXXXX</dt>
+  <dd>ZZZZZZZZZZZZZZZZZZ</dd>
+</dl>
+
+
+<h1> Yuktnix.....h1 </h1>
+<h2> Yuktnix.....h2 </h2>
+<h3> Yuktnix.....h3 </h3>
+<h4> Yuktnix.....h4 </h4>
+<h5> Yuktnix.....h5 </h5>
+<h6> Yuktnix.....h6 </h6>
+
+<p>........Yuktix simple p........</p>
+<br>
+<p class="lead">........Yuktix leads........</p>
+<strong>........Yuktix bold........</strong>
+<small>........Yuktix small........</small>
+<em>........Yuktix italics........</em><br><br>
+
+<b><p class="text-left">Yuktix left </p></b>
+<i><p class="text-center">Yuktix Center</i></p>
+<small><p class="text-right">Yuktix Right<small> </p>
+
+<h5><p class="text-muted">........Yuktix..muted...</p></h5>
+<h5><p class="text-warning">........Yuktix...warning u...</p></h5>
+<h5><p class="text-danger">........Yuktix...danger...</p></h5>
+<h5><p class="text-success">........Yuktix...success...</p></h5>
+<h5><p class="text-info">........Yuktix..info...</p></h5>
+<h5><p class="text-primary">........Yuktix...primary...</p></h5>
+
+
+
+
+</body>
+</html>

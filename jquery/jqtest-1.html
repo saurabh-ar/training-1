@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!------make it BOLD---->
+<title>Jtest-1</title>				    
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<script src="http://code.jquery.com/jquery.js"></script>
+</head>
+
+</html>
+
+<body>
+
+<script>
+
+$(document).ready(function(){
+  $("#b1").click(function(){ 
+if($("#t1").val())
+{
+$("#here").html( "Hi ! " +  $("#t1").val());
+$("#here").css("color","black");}
+else
+{
+$("#here").html("Please enter a name to print ! ")
+$("#here").css("color","#FF0000");
+}
+  });
+});
+/*$(document).ready(function(){
+  $("#b1").click(function(){ 
+$("#here").append( "Hi ! " +  $("#t1").val());
+ });
+});
+*/
+
+  //  document.html("here").innerHTML=$("#t1").val();
+  //  document.getElementById("here").innerHTML=$("#t1").val();
+ 
+
+</script>
+
+<!---row 1--->
+<div class="row">
+
+<br>
+<br>
+<br>
+<br>
+</div>
+<!----row 2---->
+<div class="row">
+
+<!----row2 coloumn 1---->
+<div class="col-lg-2"></div>
+<!---------------------->
+
+
+<!----row2 coloumn 2---->
+<div class="col-lg-8">
+
+<!-----Horizontal Text box starts--->
+<form class="form-inline">
+  <input id="t1" type="text" class="form-control" placeholder="ENTER YOUR NAME" value="" input style="font-size:20px">
+  
+  <button id="b1" type="button" class="btn btn-default"> SHOW </button>
+</form>
+
+
+
+<!-----Horizontal Text box endss--->
+
+<p id="here" input style="font-size:40px"> <strong></strong></p>
+
+</div>
+
+<br>
+<br>
+
+</div><!-----row2 ends--->
+
+
+</body>
+</html>

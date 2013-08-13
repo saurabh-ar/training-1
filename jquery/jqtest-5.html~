@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title> Traffic lights </title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <script src="js/jquery-2.0.3.min.js"></script>
+  <style>
+    .box { height : 200px; padding: 20px; border : 1px solid white ; }
+    .black { background-color : black ; }
+    .red { background-color : red ; }
+    .green { background-color : green ;}
+    .yellow { background-color : yellow ;}
+    .wrapper { margin :20px; }
+  </style>
+  
+</head>
+
+<body>
+
+
+ 
+  <div class="row">
+    <div class="col-lg-2">
+    &nbsp;
+    </div>
+    <div class="col-lg-6">
+ 
+    <div class="wrapper">
+      <div class="btn-group">
+	<button id="red-button" type="button" class="btn btn-default btn-lg">RED</button>
+	<button id="yellow-button" type="button" class="btn btn-default btn-lg">YELLOW</button>
+	<button id="green-button" type="button" class="btn btn-default btn-lg">GREEN</button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-2">
+    &nbsp;
+    </div>
+    <div class="col-lg-2">  <div id="red-box" class="box black"></div> </div>
+    <div class="col-lg-2">  <div id="yellow-box" class="box yellow"></div> </div>
+    <div class="col-lg-2">  <div id="green-box" class="box black"></div> </div>
+    
+  </div>
+</div>
+
+
+<script>
+
+$(document).ready(function () {
+  
+  $("#red-button").click(function() {
+	$("#red-box").css("background-color","red");
+	$("#green-box").css("background-color","black");
+	$("#yellow-box").css("background-color","black");
+ });
+  
+  $("#green-button").click(function() {
+	$("#red-box").css("background-color","black");
+	$("#green-box").css("background-color","green");
+	$("#yellow-box").css("background-color","black");
+	
+	
+ });
+$("#yellow-button").click(function() {
+	$("#red-box").css("background-color","black");
+	$("#green-box").css("background-color","black");
+	$("#yellow-box").css("background-color","yellow");
+		
+      
+});
+});
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script>
+function myfunction()
+{
+document.getElementById("demo").innerHTML="sam";
+var message="Hello World!";
+var x=message.indexOf("w");
+document.write(x);
+}
+
+</script>
+
+</head>
+
+
+<body>
+<p id="demo"> my name is sauarbh </p>
+
+
+<button onclick="myfunction()">try it</button>
+</body>
+</html>
