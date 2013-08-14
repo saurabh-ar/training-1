@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<title> Server-Talk </title>	
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<script src="js/jquery-2.0.3.min.js"></script>
+	
+	<style>
+	.wrapper { margin :20px; }
+	</style>
+  
+</head>
+
+
+
+<body>
+	  <script>
+	  
+	$(document).ready(function() {
+	  	    $("#buttn").click(function() {
+		    
+		    if($("#text-box").val())
+		    {
+			  $.ajax({
+				url:"  ",
+				context:$("#text-box").val(),
+				type: 'POST',
+			      
+			      }).done(function() {
+				$(this).addClass("done");
+				  });
+		    }
+
+	 });
+
+	  
+	  
+	  
+//	    $("button").click(function() {
+// 	      $.get("demo_test.asp",function(data,status) {
+// 	      alert("Data: " + data + "\nStatus: " + status);
+// 	      });
+	    });
+	  });
+	  </script>
+
+
+	<div class="row">
+	<div class="col-lg-2">
+	&nbsp;
+	</div>
+	<div class="col-lg-6">
+	  
+	      <div class="wrapper">
+	      <!-----Horizontal Text box starts--->
+	      <form class="form-inline">
+		    <input id="text-box" type="text" class="form-control" placeholder="ENTER TEXT" value="" input style="font-size:20px">
+		    
+		    <button id="buttn" type="button" class="btn btn-default"> OK </button>
+		<div class="wrapper">
+		
+		<p id="text-display"></p>
+		
+		</div>
+	      </form>
+
+
+
+	      <!-----Horizontal Text box endss--->
+
+
+	      </div>
+	</div>
+
+</body>
+</html>
