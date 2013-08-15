@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<title> Server-Text-Reverse </title>	
+	
+	<link href="/asset/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<script src="/asset/js/jquery-2.0.3.min.js"></script>
+	<script src="/asset/yuktix/yuktix.js"></script>
+	<style>
+	.wrapper { margin :20px; }
+	</style>
+  
+</head>
+
+
+
+<body>
+	  <script>
+		    $(document).ready(function() {
+
+			$("#revbutton").click(function() {
+			  var messageDivId = "#ajax-message" ;
+			  var token = $("#textbox").val() ;
+			  
+			  if(token == '') { 
+			    yuktix.Ajax.show(messageDivId, "please enter token");
+			  } 
+			  else {
+			    var dataObj = {};
+			    var options = {"messageDivId" : "#ajax-message", "dataType" : "text" } ;
+			   
+			    dataObj.endPoint ="http://localhost/php/reverse.php" ;
+			    dataObj.params = {"token" : token} ;
+			    yuktix.Ajax.post(dataObj,options);
+			    
+			    
+			  }
+			  
+			  });
+		    
+			  
+		     });
+		     
+		     
+	  </script>
+
+
+	<div class="row">
+	<div class="col-lg-2">
+	&nbsp;
+	</div>
+	<div class="col-lg-6">
+	  
+	      <div class="wrapper">
+		    
+		    <!-----Horizontal Text box starts--->
+
+		  <form class="form-inline">
+		  <input id="textbox" type="text" class="form-control" placeholder="ENTER TEXT" value="" input style="font-size:20px">
+  
+		  <button id="revbutton" type="button" class="btn btn-default"> REVERSE </button>
+		  </form>
+
+		  <!-----Horizontal Text box endss--->
+
+		  <p id="ajax-message" input style="font-size:30px"> <strong></strong></p>
+
+
+		   
+		  </p> 
+	      </div>
+	</div>
+
+</body>
+</html>
