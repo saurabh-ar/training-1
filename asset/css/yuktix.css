@@ -2,12 +2,27 @@ body {
 	padding-top : 90px; /* padding for fixed toolbar at top */
 }
 
-
-p#here{
-color: "green";
+#ajax-message {
+	
+	font-size:30px;
+	
 }
 
+#display {
 	
+	font-size: 40px;
+	color: "black";
+}
+
+#t1 {
+	
+	font-size: 15px;
+	color: "black";
+}
+
+.wrapper {
+		margin: 20px;
+	}
 }
 
 .form-control {

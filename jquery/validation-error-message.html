@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+
+<title>VALIDATION</title>
+
+<link href="/asset/css/bootstrap.min.css" rel="stylesheet"
+	media="screen">
+<script src="/asset/js/jquery-2.0.3.min.js"></script>
+<script src="/asset/yuktix/yuktix-vaidation.js"></script>
+<link href="/asset/css/yuktix.css" rel="stylesheet" media="screen">
+
+<script>
+	$(document).ready(function() {
+		$("#b1").click(function() {
+			if ($("#t1").val()) {
+				$("#display").html("Hi ! " + $("#t1").val());
+
+			} 
+			else {
+				$("#display").html(
+				"<div class='alert fade in'>\
+		        <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>\
+		        <strong>ERROR!</strong> Please enter a value.\
+		      	</div>");
+			}
+		});
+	});
+</script>
+
+
+</head>
+<body>
+
+	<div class="row" class="wrapper">
+		<div class="col-lg-2"></div>
+		<div class="col-lg-8">
+
+
+			<form class="form-inline">
+				<input id="t1" type="text" class="form-control"
+					placeholder="ENTER YOUR NAME" value="">
+
+				<button id="b1" type="button" class="btn btn-default">SHOW
+				</button>
+			</form>
+
+			<p id="display">
+				<strong></strong>
+			</p>
+
+		</div>
+
+	</div>
+</body>
+</html>
