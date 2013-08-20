@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CHARTS</title>
+
+
+
+
+<script src="/asset/js/jquery-2.0.3.min.js"></script>
+<link href="/asset/css/bootstrap.css" rel="stylesheet" media="screen">
+<script src="/asset/bootstrap/bootstrap.js"></script>
+<script src="/asset/js/Chart.js-master/Chart.js"></script>
+<script src="/asset/yuktix/yuktix.js"></script>
+<link href="/asset/css/yuktix.css" rel="stylesheet" media="screen">
+</head>
+<script>
+
+	$(document).ready(function() {
+			var c = document.getElementById("myChart")
+			var ctx = c.getContext("2d");
+			
+			var data = [
+			        	{
+			        		value : 30,
+			        		color: "#D97041"
+			        	},
+			        	{
+			        		value : 90,
+			        		color: "#C7604C"
+			        	},
+			        	{
+			        		value : 24,
+			        		color: "#21323D"
+			        	},
+			        	{
+			        		value : 58,
+			        		color: "#9D9B7F"
+			        	},
+			        	{
+			        		value : 82,
+			        		color: "#7D4F6D"
+			        	},
+			        	{
+			        		value : 8,
+			        		color: "#584A5E"
+			        	}
+			        ]
+
+			var options = {
+					
+					//Boolean - Whether we show the scale above or below the chart segments
+					scaleOverlay : true,
+					
+					//Boolean - If we want to override with a hard coded scale
+					scaleOverride : false,
+					
+					//** Required if scaleOverride is true **
+					//Number - The number of steps in a hard coded scale
+					scaleSteps : 5,
+					//Number - The value jump in the hard coded scale
+					scaleStepWidth : null,
+					//Number - The centre starting value
+					scaleStartValue : null,
+					
+					//Boolean - Show line for each value in the scale
+					scaleShowLine : true,
+					
+					//String - The colour of the scale line
+					scaleLineColor : "rgba(0,0,0,.1)",
+					
+					//Number - The width of the line - in pixels
+					scaleLineWidth : 1,
+					
+					//Boolean - whether we should show text labels
+					scaleShowLabels : true,
+					
+					//Interpolated JS string - can access value
+					scaleLabel : "<%=value%>",
+					
+					//String - Scale label font declaration for the scale label
+					scaleFontFamily : "'Arial'",
+					
+					//Number - Scale label font size in pixels	
+					scaleFontSize : 12,
+					
+					//String - Scale label font weight style	
+					scaleFontStyle : "normal",
+					
+					//String - Scale label font colour	
+					scaleFontColor : "#666",
+					
+					//Boolean - Show a backdrop to the scale label
+					scaleShowLabelBackdrop : true,
+					
+					//String - The colour of the label backdrop	
+					scaleBackdropColor : "rgba(255,255,255,0.75)",
+					
+					//Number - The backdrop padding above & below the label in pixels
+					scaleBackdropPaddingY : 2,
+					
+					//Number - The backdrop padding to the side of the label in pixels	
+					scaleBackdropPaddingX : 2,
+
+					//Boolean - Stroke a line around each segment in the chart
+					segmentShowStroke : true,
+					
+					//String - The colour of the stroke on each segement.
+					segmentStrokeColor : "#fff",
+					
+					//Number - The width of the stroke value in pixels	
+					segmentStrokeWidth : 2,
+					
+					//Boolean - Whether to animate the chart or not
+					animation : true,
+					
+					//Number - Amount of animation steps
+					animationSteps : 100,
+					
+					//String - Animation easing effect.
+					animationEasing : "easeOutBounce",
+
+					//Boolean - Whether to animate the rotation of the chart
+					animateRotate : true,
+					
+					//Boolean - Whether to animate scaling the chart from the centre
+					animateScale : false,
+
+					//Function - This will fire when the animation of the chart is complete.
+					onAnimationComplete : null
+				}
+			
+			var myNewChart = new Chart(ctx).PolarArea(data);
+			new Chart(ctx).PolarArea(data,options);
+			
+			
+			
+			var c2 = document.getElementById("myChart2")
+			var ctx2 = c2.getContext("2d");
+	
+			var data = {
+					labels : ["January","February","March","April","May","June","July"],
+					datasets : [
+						{
+							fillColor : "rgba(220,220,220,0.5)",
+							strokeColor : "rgba(220,220,220,1)",
+							data : [65,59,90,81,56,55,40]
+						},
+						{
+							fillColor : "rgba(151,187,205,0.5)",
+							strokeColor : "rgba(151,187,205,1)",
+							data : [28,48,40,19,96,27,100]
+						}
+					]
+				}
+			var myNewChart2 = new Chart(ctx2).Bar(data);
+	
+			
+			
+			var c3 = document.getElementById("myChart3");
+			var ctx3 = c3.getContext("2d");
+			
+			var data = [
+			        	{
+			        		value: 30,
+			        		color:"#F38630"
+			        	},
+			        	{
+			        		value : 50,
+			        		color : "#E0E4CC"
+			        	},
+			        	{
+			        		value : 100,
+			        		color : "#69D2E7"
+			        	}			
+			        ]
+	
+			var myNewChart3 = new Chart(ctx3).Pie(data);
+	});
+</script>
+
+
+<body>
+<div class="row">
+
+<div class="col-lg-4">
+<canvas id="myChart" width="400" height="400">
+</canvas>
+</div>
+
+<div class="col-lg-4">
+<canvas id="myChart2" width="400" height="400">
+
+</canvas>
+</div>
+
+<div class="col-lg-3">
+<canvas id="myChart3" width="400" height="400">
+
+</canvas>
+</div>
+</div>
+</body>
+</html>

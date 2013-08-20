@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script type="text/javascript" src="/asset/js/jsapi.JS"></script>
+<script type="text/javascript">
+	google.load("visualization", "1", {
+		packages : [ "corechart" ]
+	});
+
+	google.setOnLoadCallback(drawChart);
+
+	
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable([ [ 'X', 'Y' ],
+				[ '1', 20 ], [ '2', 80 ], [ '3', 5 ], [ '4', 160 ] ]);
+
+		var options = {
+			title : 'X-Y PLOT'
+		};
+
+		var chart = new google.visualization.LineChart(document
+				.getElementById('chart_div1'));
+		chart.draw(data, options);
+		
+		var chart = new google.visualization.AreaChart(document
+				.getElementById('chart_div2'));
+		chart.draw(data, options);
+		
+		var chart = new google.visualization.ColumnChart(document
+				.getElementById('chart_div3'));
+		chart.draw(data, options);
+		
+	}
+</script>
+</head>
+<body>
+
+<div class="row" >
+			<div class="col-lg-4">
+			<div id="chart_div1" style="width: 400px; height: 400px;"></div>
+			</div>
+			<div class="col-lg-4">
+			<div id="chart_div2" style="width: 400px; height: 400px;"></div>
+			</div>
+			<div class="col-lg-4">
+			<div id="chart_div3" style="width: 400px; height: 400px;"></div>
+			</div>
+			
+</div>
+	
+</div>
+
+
+</body>
+</html>

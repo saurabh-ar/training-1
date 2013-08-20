@@ -4,53 +4,52 @@
 <meta charset="UTF-8">
 <title>pop up box</title>
 
-<link
-	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
-	rel="stylesheet">
-"
-<!--  <link href="/asset/css/bootstrap.css" rel="stylesheet" media="screen"> -->
-<script src="/asset/js/jquery-2.0.3.min.js"></script>
 
-<script
-	src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<!-- <script src="/asset/bootstrap/bootstrap.js"></script> --->
+
+ 
+<script src="/asset/js/jquery-2.0.3.min.js"></script>
+<link href="/asset/css/bootstrap.css" rel="stylesheet" media="screen">
+<script src="/asset/bootstrap/bootstrap.js"></script>
+ 
 <script src="/asset/yuktix/yuktix.js"></script>
 <link href="/asset/css/yuktix.css" rel="stylesheet" media="screen">
+
+
 </head>
 
 <body>
 	<script>
 		$(document).ready(function() {
-
-			$("#launch-button").click(function() {
-				$('#example').modal('show');
-			});
+			
+			$("#open-popup").click(function() {
+				$('#example').modal();
+			}); 
 
 		});
 	</script>
 
-	<div class="container">
-		<h2>Example of Modals with Twitter Bootstrap</h2>
-		<div class="modal fade" id="example" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-header">
-				<a class="close" data-dismiss="modal">×</a>
-				<h3>This is a Modal Heading</h3>
-			</div>
-			<div class="modal-body">
-				<h4>Text in a modal</h4>
-				<p>You can add some text here.</p>
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn btn-success">Call to action</a> <a href="#"
-					class="btn" data-dismiss="modal">Close</a>
-			</div>
-		</div>
-		<p>
-			<a id="launch-button" data-toggle="modal" href="#"
-				class="btn btn-primary btn-large">Launch demo modal</a>
-		</p>
-	</div>
-	</div>
+
+	<div class="modal fade" id="example" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<a class="close" data-dismiss="modal">×</a>
+					<h3>This is a Modal Heading</h3>
+				</div>
+				<div class="modal-body">
+					<h4>Text in a modal</h4>
+					<p>You can add some text here.</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-success">Call to action</a> <a href="#"
+						class="btn" data-dismiss="modal">Close</a>
+				</div>
+			</div> <!--  modal content -->
+		</div> <!--  modal dialog  -->
+	</div> <!--  modal -->
+	
+	<a data-toggle="modal" href="#example" class="btn btn-primary btn-large">Launch via Markup</a>
+	<a id="open-popup" href="#" class="btn btn-primary btn-large">Launch via Javascript</a>
+	
 </body>
 </html>
