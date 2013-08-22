@@ -3,55 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <title>drop down tool bar</title>
-<link href="/asset/css/bootstrap.min.css" rel="stylesheet"media="screen">	
-<script src="/asset/js/jquery-2.0.3.min.js"></script>
 
+<script src="/asset/js/jquery-2.0.3.min.js"></script>
+<link href="/asset/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<script src="/asset/js/bootstrap.js"></script>
 <link href="/asset/css/yuktix.css" rel="stylesheet" media="screen">
-<link href="/asset/css/sample1.css" rel="stylesheet" media="screen">
+
 
 <style>
 .wide-menu {
- width : 400px;
- display: block ;
-}
-
-.topmost{
-position: absolute;
-top:20px;
-z-index:2000;
-
-}
+	width: 400px;
+	display: block;
+}  
 
 .wide-menu ul {
-	float: left ;
-	width : 30% ;
+	float: left;
+	width: 30%;
+}
+
+.shift-right {
+	text-align: right;
+	float: right;
+	width: 510px;
+}
+
+.shift-left {
+	float: left;
+	width: 510px;
 }
 </style>
-
-
-
 </head>
+
 
 <script>
 	$(document).ready(function() {
-	
+
 		$("#drop").click(function() {
 			$("#down").slideToggle("slow");
 		});
-		
-		
-		
-		$( "#simple-popup-close" ).click(function() {
-			  $("#simple-popup").css("display","none");
+
+		$("#simple-popup-close").click(function() {
+			$("#simple-popup").css("display", "none");
 		});
-		
-		$( "#simple-popup-open" ).click(function() {
-			$("#simple-popup").css("display","block");			  
+
+		$("#simple-popup-open").click(function() {
+			$("#simple-popup").css("display", "block");
 		});
-		
-		
+
+		$("#close-overlay").click(function() {
+			$("#overlay-message").css("display", "none");
+		});
+
 	});
-	
 </script>
 
 
@@ -59,29 +62,36 @@ z-index:2000;
 <body>
 
 
-<div id="overlay-message">
-	<p> micky mouse</p>
-</div>
 
-
-<div id="simple-popup">
-     <div id="header">
-         <div class="wrapper">
-            <div class="floatr">
-                <a id="simple-popup-close" href="">close&nbsp;<i class="icon-remove"> </i></a>
-            </div>
-        </div>
-        <div class="clear"> </div>
-     </div>
-    <div id="content">
-		<h3> popup body</h3>
+	<div id="overlay-message">
+		<div class="row">
+			<div class="col-lg-8">
+				<p>micky mouse</p>
+			</div>
+			<div class="col-lg-4">
+				<span class="pull-right">
+					<a id="close-overlay" href="#"><span class="glyphicon glyphicon-remove"></span>close</a>
+				</span>
+			</div>
+		</div>
 	</div>
 
-</div>
 
-<div id="popup-mask"> </div>
+	<div id="simple-popup">
+		<div id="header">
+			<div class="wrapper">
+				<div class="floatr">
+					<a id="simple-popup-close" href="#">close&nbsp;<i
+						class="icon-remove"> </i></a>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="content">
+			<h3>popup body</h3>
+		</div>
 
-
+	</div>
 
 
 
@@ -90,44 +100,41 @@ z-index:2000;
 	<div class="row">
 		<div class="tool">
 			<nav class="navbar navbar-fixed-top" role="navigation">
-				<ul class="nav nav-tabs">
+				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Link 1</a></li>
 					<li><a href="#"> Link 2</a></li>
 					<li><a href="#"> Link 3</a></li>
 					<li><a href="#"> Link 4</a></li>
-					<li class="dropdown"><a id="drop" role="button"
-						data-toggle="dropdown" data-target="#" href="#"
+					<li class="dropdown"><a role="button"data-toggle="dropdown" data-target="#" href="#"
 						class="dropdown-toggle"> Dropdown <span class="caret"></span></a>
-						 
+
 						<ul id="down" class="dropdown-menu" role="menu">
 							<li>
 								<div class="wide-menu">
-										<ul>
-											
-											<li><a href="#">link 5</a></li>
-											<li><a href="#">link 5</a></li>
-										
-										</ul>
-										
-										<ul>
-											
-											<li><a href="#">link 5</a></li>
-											<li><a href="#">link 5</a></li>
-										
-										</ul>
-										
-										<ul>
-											
-											<li><a href="#">link 5</a></li>
-											<li><a href="#">link 5</a></li>
-										
-										</ul>
-										
-								</div>	
+									<ul>
+
+										<li><a href="#">link 5</a></li>
+										<li><a href="#">link 5</a></li>
+
+									</ul>
+
+									<ul>
+
+										<li><a href="#">link 5</a></li>
+										<li><a href="#">link 5</a></li>
+
+									</ul>
+
+									<ul>
+
+										<li><a href="#">link 5</a></li>
+										<li><a href="#">link 5</a></li>
+
+									</ul>
+
+								</div>
 							</li>
-						</ul>
-					
-					</li>
+						</ul></li>
 				</ul>
 			</nav>
 		</div>
@@ -135,22 +142,18 @@ z-index:2000;
 
 
 
-<p>Assuming your server side script doesn't set the proper Content-Type: application/json response header you will need to indicate to jQuery that this is JSON by using the dataType: 'json' parameter.
+	<p>INTERVIEW OF SUNNY LEONE : I was just brought up in a way where
+		that's what a man should do, at least on the first date anyway.Tweet
+		This Quote Here at AskMen, we’re all about helping guys. But sometimes
+		advice from one dude to another can only go so far. That’s why we
+		decided to go straight to the source to find out what the world's
+		hottest women actually expect from us. This week, we asked adult
+		actress and soon-to-be Bollywood star Sunny Leone what she looks for
+		in guys. Hopefully her answers make the female sex a little less
+		mysterious. If anything, we've learned that humble guys aren't
+		necessarily less attractive than cocky guys. </p>
 
-Then you could use the $.each() function to loop through the data:
-
-Assuming your server side script doesn't set the proper Content-Type: application/json response header you will need to indicate to jQuery that this is JSON by using the dataType: 'json' parameter.
-
-Then you could use the $.each() function to loop through the data:
-
-Assuming your server side script doesn't set the proper Content-Type: application/json response header you will need to indicate to jQuery that this is JSON by using the dataType: 'json' parameter.
-
-Then you could use the $.each() function to loop through the data:
-
-Assuming your server side script doesn't set the proper Content-Type: application/json response header you will need to indicate to jQuery that this is JSON by using the dataType: 'json' parameter.
-
-Then you could use the $.each() function to loop through the data:</p>
-
- <a id="simple-popup-open" href="">open popup&nbsp;</a>
+	<a class="btn btn-default btn-lg" id="simple-popup-open" href="#">open
+		popup&nbsp;</a>
 </body>
 </html>
