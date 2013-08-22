@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>drop down tool bar</title>
+<link href="/asset/css/bootstrap.min.css" rel="stylesheet"media="screen">	
+<script src="/asset/js/jquery-2.0.3.min.js"></script>
+
+<link href="/asset/css/yuktix.css" rel="stylesheet" media="screen">
+<link href="/asset/css/sample1.css" rel="stylesheet" media="screen">
+
+<style>
+.wide-menu {
+ width : 400px;
+ display: block ;
+}
+
+.topmost{
+position: absolute;
+top:20px;
+z-index:2000;
+
+}
+
+.wide-menu ul {
+	float: left ;
+	width : 30% ;
+}
+</style>
+
+
+
+</head>
+
+<script>
+	$(document).ready(function() {
+	
+		$("#drop").click(function() {
+			$("#down").slideToggle("slow");
+		});
+		
+		
+		
+		$( "#simple-popup-close" ).click(function() {
+			  $("#simple-popup").css("display","none");
+		});
+		
+		$( "#simple-popup-open" ).click(function() {
+			$("#simple-popup").css("display","block");			  
+		});
+		
+		
+	});
+	
+</script>
+
+
+
+<body>
+
+
+<div id="overlay-message">
+	<p> micky mouse</p>
+</div>
+
+
+<div id="simple-popup">
+     <div id="header">
+         <div class="wrapper">
+            <div class="floatr">
+                <a id="simple-popup-close" href="">close&nbsp;<i class="icon-remove"> </i></a>
+            </div>
+        </div>
+        <div class="clear"> </div>
+     </div>
+    <div id="content">
+		<h3> popup body</h3>
+	</div>
+
+</div>
+
+<div id="popup-mask"> </div>
+
+
+
+
+
+
+
+	<div class="row">
+		<div class="tool">
+			<nav class="navbar navbar-fixed-top" role="navigation">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#">Link 1</a></li>
+					<li><a href="#"> Link 2</a></li>
+					<li><a href="#"> Link 3</a></li>
+					<li><a href="#"> Link 4</a></li>
+					<li class="dropdown"><a id="drop" role="button"
+						data-toggle="dropdown" data-target="#" href="#"
+						class="dropdown-toggle"> Dropdown <span class="caret"></span></a>
+						 
+						<ul id="down" class="dropdown-menu" role="menu">
+							<li>
+								<div class="wide-menu">
+										<ul>
+											
+											<li><a href="#">link 5</a></li>
+											<li><a href="#">link 5</a></li>
+										
+										</ul>
+										
+										<ul>
+											
+											<li><a href="#">link 5</a></li>
+											<li><a href="#">link 5</a></li>
+										
+										</ul>
+										
+										<ul>
+											
+											<li><a href="#">link 5</a></li>
+											<li><a href="#">link 5</a></li>
+										
+										</ul>
+										
+								</div>	
+							</li>
+						</ul>
+					
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+
+
+<p>Assuming your server side script doesn't set the proper Content-Type: application/json response header you will need to indicate to jQuery that this is JSON by using the dataType: 'json' parameter.
+
+Then you could use the $.each() function to loop through the data:
+
+Assuming your server side script doesn't set the proper Content-Type: application/json response header you will need to indicate to jQuery that this is JSON by using the dataType: 'json' parameter.
+
+Then you could use the $.each() function to loop through the data:
+
+Assuming your server side script doesn't set the proper Content-Type: application/json response header you will need to indicate to jQuery that this is JSON by using the dataType: 'json' parameter.
+
+Then you could use the $.each() function to loop through the data:
+
+Assuming your server side script doesn't set the proper Content-Type: application/json response header you will need to indicate to jQuery that this is JSON by using the dataType: 'json' parameter.
+
+Then you could use the $.each() function to loop through the data:</p>
+
+ <a id="simple-popup-open" href="">open popup&nbsp;</a>
+</body>
+</html>
