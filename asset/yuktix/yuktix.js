@@ -4,7 +4,7 @@ yuktix.Ajax = {
 
 	addSpinner : function(messageDivId, spinner) {
 
-		$(messageDivId).html('')
+		$(messageDivId).html('')     //didnt get its use here.
 
 		if (spinner) {
 
@@ -36,7 +36,8 @@ yuktix.Ajax = {
 		}
 
 		var settings = $.extend({}, defaults, options);
-		this.addSpinner(settings.messageDivId, spinner);
+		
+		this.addSpinner(settings.messageDivId, spinner); 
 
 		var xmlRequest = $.ajax({
 			url : dataObj.endPoint,

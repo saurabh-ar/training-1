@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>drop down tool bar</title>
-<link href="/asset/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/asset/css/bootstrap.min.css" rel="stylesheet"
+	media="screen">
 <script src="/asset/js/jquery-2.0.3.min.js"></script>
 <script src="/asset/yuktix/yuktix-vaidation.js"></script>
 <link href="/asset/css/yuktix.css" rel="stylesheet" media="screen">
 
 <style>
 .wide-menu {
- width : 400px;
- display: block ;
+	width: 400px;
+	display: block;
 }
 
 .wide-menu ul {
-	float: left ;
-	width : 30% ;
+	float: left;
+	width: 30%;
 }
 </style>
 
@@ -28,7 +29,7 @@
 	$(document).ready(function() {
 
 		$("#drop").click(function() {
-			$("#down").slideToggle("slow");
+			$("#menu-down").show();
 		});
 
 	});
@@ -38,7 +39,7 @@
 	<div class="row">
 		<div class="tool">
 			<nav class="navbar navbar-fixed-top" role="navigation">
-				<ul class="nav nav-tabs">
+				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Link 1</a></li>
 					<li><a href="#"> Link 2</a></li>
 					<li><a href="#"> Link 3</a></li>
@@ -46,36 +47,34 @@
 					<li class="dropdown"><a id="drop" role="button"
 						data-toggle="dropdown" data-target="#" href="#"
 						class="dropdown-toggle"> Dropdown <span class="caret"></span></a>
-						 
-						<ul id="down" class="dropdown-menu" role="menu">
+
+						<ul id="menu-down" class="dropdown-menu" role="menu">
 							<li>
 								<div class="wide-menu">
-										<ul>
-											
-											<li><a href="#">link 5</a></li>
-											<li><a href="#">link 5</a></li>
-										
-										</ul>
-										
-										<ul>
-											
-											<li><a href="#">link 5</a></li>
-											<li><a href="#">link 5</a></li>
-										
-										</ul>
-										
-										<ul>
-											
-											<li><a href="#">link 5</a></li>
-											<li><a href="#">link 5</a></li>
-										
-										</ul>
-										
-								</div>	
+									<ul>
+
+										<li><a href="#">link 5</a></li>
+										<li><a href="#">link 5</a></li>
+
+									</ul>
+
+									<ul>
+
+										<li><a href="#">link 5</a></li>
+										<li><a href="#">link 5</a></li>
+
+									</ul>
+
+									<ul>
+
+										<li><a href="#">link 5</a></li>
+										<li><a href="#">link 5</a></li>
+
+									</ul>
+
+								</div>
 							</li>
-						</ul>
-					
-					</li>
+						</ul></li>
 				</ul>
 			</nav>
 		</div>

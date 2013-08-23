@@ -421,16 +421,15 @@
         background: none repeat scroll 0 0 #F9EDBE;
         border-bottom: 1px solid black;
         box-shadow: 0 1px 15px #9C9C9C;
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 13px;
         line-height: 21px;
         left: 0;
         opacity: 0;
         padding: 10px 10% 10px;
         position: fixed;
         /* overlay.top should match body.padding-top */
-        top: 60px;
-        width: 80%;
+        top: 50px;
+        width: 100%;
         z-index: 1009;
         height:60px;
         text-align:center ;

@@ -2,6 +2,27 @@ body {
 	padding-top: 90px; /* padding for fixed toolbar at top */
 }
 
+.wide-menu {
+	width: 400px;
+	display: block;
+}  
+
+.wide-menu ul {
+	float: left;
+	width: 30%;
+}
+
+.shift-right {
+	text-align: right;
+	float: right;
+	width: 510px;
+}
+
+.shift-left {
+	float: left;
+	width: 510px;
+}
+
 #ajax-message {
 	font-size: 30px;
 	padding-top: 20px:
