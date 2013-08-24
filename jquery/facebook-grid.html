@@ -9,24 +9,54 @@
 	media="screen">
 <script src="/asset/js/jquery-2.0.3.min.js"></script>
 <script src="/asset/yuktix/yuktix-vaidation.js"></script>
-<link href="/asset/css/yuktix.css" rel="stylesheet" media="screen">
+
 </head>
+<style>
+.col-lg-2 {
+width: 16.666666666666664%;
+border: 1px solid black;
+}
+.toolbar {
+border: 1px solid grey;
+margin: 2px;
+}
 
+.h100 {
+height: 100px;
+border: 1px solid red;
+margin: 3px 3px;
+}
+.h200 {
+height: 200px;
+border: 1px solid green;
+margin: 3px 3px;
 
+}
+.h400 {
+height: 200px;
+margin: 5px 5px;
+border: 1px solid blue;
+}
+
+.footer{
+position:absolute !important;
+bottom: 0px;
+}
+</style>
 <body>
 	<!-- --GRID -->
-
 	<div class="col-lg-9">
 		<div class="toolbar" class="row">toolbar</div>
+		
 		<div class="row">
 			<!-- --SECOND ROW -->
-
+	
 			<div class="col-lg-2">
-				<div class="h200" class="row">PROFILE</div>
-				<div class="h400" class="row">GROUPS</div>
-				<div class="h400" class="row">APPLICATIONS</div>
+					<div class="h200" class="row">PROFILE</div>
+					<div class="h400" class="row">GROUPS</div>
+					<div class="h400" class="row">APPLICATIONS</div>
 			</div>
-
+			
 			<div class="col-lg-7">
 				<div class="h100" class="row">STATUS</div>
 				<div class="h200" class="row">NEWS FEED 1</div>
@@ -36,10 +66,16 @@
 			</div>
 		</div>
 	</div>
-
-
-
-	<div class="col-lg-2">CHATS</div>
+	
+	<div class="col-lg-2">
+	<div class="row">
+		<div class="h400" class="footer">
+		<h4>chats</h4>
+		</div>
+	</div>
+	
+	
+</div>
 
 
 
