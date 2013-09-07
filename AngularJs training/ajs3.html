@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>My HTML File</title>
+
+<link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+<script src="/assets/bootstrap/js/jquery-2.0.3.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.js"></script>
+<script src="/assets/bootstrap/js/angular.js"></script>
+<script src="/assets/bootstrap/js/main.js"></script>
+
+</head>
+<body>
+	<div ng-app="">
+				<input type="text" ng-model="data.message">
+				<h1>{{data.message}}</h1>
+				
+				<div ng-controller="FirstCtrl">
+						<input type="text" ng-model="data.message">
+						<h1>{{data.message}}</h1>
+				</div>
+	
+				<div ng-controller="SecondCtrl">
+						<input type="text" ng-model="data.message">
+						<h1>{{data.message}}</h1>
+						
+				</div>
+	</div>
+
+</body>
+</html>
