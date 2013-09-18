@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+<meta charset="UTF-8">
+<title>Using controllers</title>
+ <script src="/home/saurabh/code/training/asset/js/jquery-2.0.3.js"></script>
+<link href="/home/saurabh/code/training/asset/css/bootstrap.css" rel="stylesheet" media="screen">
+</head>
+<body ng-controller ="SimpleController">
+	Name:
+	<br />
+	<input type="text" ng-model="name" /> {{ name }}
+	<br />
+	<ul>
+		<li data-ng-repeat="cust in customers|filter:name">{{cust.name}} - {{cust.city}}</li>
+	</ul>	
+
+
+
+<script src="/home/saurabh/code/training/asset/js/angular.js"></script>
+<script>
+function SimpleController($scope) {
+		$scope.customers= [
+			{name:'John', city:'Phoenix'},
+            {name:'Sam', city:'LA'},
+            {name:'Sara', city:'NY'},
+            {name:'Jack', city:'Atlanta'}                   
+		    ];               
+}             
+		 
+		
+
+
+</script>
+
+</body>
+</html>

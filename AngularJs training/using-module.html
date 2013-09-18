@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+<meta charset="UTF-8">
+<title>Using Modules</title>
+ 
+<link href="/home/saurabh/code/training/asset/css/bootstrap.css" rel="stylesheet" media="screen">
+</head>
+<body >
+
+<div ng-controller ="SimpleController">
+	Name:
+	<br />
+	<input type="text" ng-model="name" />
+	<br />
+	<ul>
+		<li data-ng-repeat="cust in customers|filter:name|orderBy:'city'">{{cust.name|uppercase}} - {{cust.city}}</li>
+	</ul>	
+</div>
+
+
+<script src="/home/saurabh/code/training/asset/js/angular.js"></script>
+<script src="/home/saurabh/code/training/asset/js/jquery-2.0.3.js"></script>
+<script>
+	var demoApp= angular.module('demoApp',[]);
+	demoApp.controller('SimpleController', function ($scope){
+		$scope.customers= [
+		       		   {name:'John', city:'Phoenix'},
+	                   {name:'Sam', city:'LA'},
+	                   {name:'Sara', city:'NY'},
+	                   {name:'Jack', city:'Atlanta'},
+	                   {name:'Saurabh', city:'Bangalore'},
+	                   {name:'Sagar', city:'Jaipur'}
+			       	];               
+		       });            
+
+</script>
+
+</body>
+</html>

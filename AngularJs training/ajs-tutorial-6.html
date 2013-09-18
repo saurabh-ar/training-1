@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app ng-controller="PhoneListCtrl">
+<head>
+<meta charset="utf-8">
+<!-- please copy and paste these file in /github/sensor-db/wireframes/devices and then use it -->
+<!-- these file works with the help of Localhost, thats why we are doing this  -->
+
+<title>Google phone gallery</title>
+<link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="/assets/bootstrap/css/bootstrap-theme.css" rel="stylesheet" media="screen">
+<script src="/assets/bootstrap/js/jquery-2.0.3.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.js"></script>
+<script src="/assets/bootstrap/js/angular.js"></script>
+<script src="/assets/bootstrap/js/controller.js"></script>
+<script src="/assets/bootstrap/js/app.js"></script>
+<link href="/assets/bootstrap/css/app.css" rel="stylesheet" media="screen">
+
+</head>
+<body >
+
+<div class="container-fluid">
+     <div class="row-fluid">
+       <div class="span2">
+         <!--Sidebar content-->
+ 
+         Search: <input ng-model="query">
+          Sort by:
+         <select ng-model="orderProp">
+           <option value="name">Alphabetical</option>
+           <option value="age">Newest</option>
+         </select>
+       </div>
+       
+       <div class="span10">
+         <!--Body content-->
+  <ul class="phones">
+
+          <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
+            <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+            <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+             <p>{{phone.snippet}}</p>
+           </li>
+         </ul>
+ 
+       </div>
+     </div>
+   </div>
+ 
+
+</body>
+</html>

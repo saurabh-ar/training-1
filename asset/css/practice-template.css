@@ -1,0 +1,145 @@
+.navbar-wrapper {
+	margin-top: 20px;
+}
+
+.navbar-wrapper {
+	position: relative;
+	z-index: 15;
+}
+
+#container-jumbo {
+max-width: 730px;
+}
+
+#header-jumbo {
+margin-bottom: 30px;
+height: 60px;
+}
+
+
+/* marketing-stuff */
+
+.nav-justified {
+	background-color: #eee;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.nav-justified>li>a {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #d5d5d5;
+}
+
+.nav-justified>li>a {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: #777;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px solid #d5d5d5;
+	background-color: #e5e5e5;
+	background-repeat: repeat-x;
+}
+#jumbtron-marketing {
+	background-color: white;
+	text-align: center;
+}
+#footer-marketing {
+	border-top: 1px solid #eee;
+	margin-top: 40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.masthead,.marketing,.footer {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.nav-justified {
+	max-height: 52px;
+}
+
+
+/* Non-Responspive-bootstrap */
+
+#page-header-non {
+	margin-top: 70px;
+}
+.col-xs-4 {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: rgba(86,61,124,.15);
+	border: 1px solid rgba(86,61,124,.2);
+}
+
+
+/* off-canvas-nav */
+
+#off-canvas {
+	margin-top: 80px;
+}
+/* form-sigin */
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+/* simple-toolbar */
+#heading-container {
+padding-top:60px;
+}
+
+/* sticky footer with toolbar */
+#page-header {
+	padding-bottom: 9px;
+	margin: 40px 0 20px;
+	border-bottom: 1px solid #eeeeee;
+	margin-top: 60px;
+}
+
+#footer {
+	height: 60px;
+	background-color: #f5f5f5;
+}
+/* template 4 */
+
+#temp-4-body {
+	padding: 30px;
+}
+
+/* template-3 */
+#temp-3-jumbotron {
+background-color: white;
+}
+
+
+/* theme template */
+#container-theme {
+margin-top: 70px;
+}
+
+
+
+
+.big-container.container {
+	
+	width: 970px;
+}
+
+
+/* Toolbar-big-drop-down */
+
+.dropdown .dropdown-menu>li>a {
+	padding: 8px 101px 8px 88px;
+}
+
+.dropdown .dropdown-menu>li>a.bor {
+	border-right: 1px solid grey;
+}
+
+ul[class="dropdown-menu wide-dropdown"]  /* or ul.wide-dropdown*/
+{
+	width: 450px;
+}
