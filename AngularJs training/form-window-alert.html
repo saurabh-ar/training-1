@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+<meta charset="UTF-8">
+<title>Using controllers</title>
+ <script src="/home/saurabh/code/training/asset/js/jquery-2.0.3.js"></script>
+<link href="/home/saurabh/code/training/asset/css/bootstrap.css" rel="stylesheet" media="screen">
+</head>
+<body>
+
+<form ng-submit="requestFunding()" ng-controller="StartUpController" style="padding-top:40px;">
+
+Starting: <input ng-change="computeNeeded()" ng-model="startingEstimate">
+
+Recommendation: {{needed}}
+<button> Fund my startup !</button>
+</form>
+
+
+<script src="/home/saurabh/code/training/asset/js/angular.js"></script>
+<script>
+function StartUpController($scope) {
+		$scope.computeNeeded= function() {
+			
+			$scope.needed=$scope.startingEstimate * 10;
+			
+		}; 
+		$scope.requestFunding=function() {
+		window.alert("Sorry, please get more customers first.");
+		};
+}
+		 
+		
+</script>
+
+</body>
+</html>
